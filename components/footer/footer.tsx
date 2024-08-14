@@ -14,13 +14,13 @@ const Footer = () => {
                 variant="contained"
                 aria-label="Disabled button group"
                 >
-                <Button sx={{backgroundColor: "#141414"}}>
+                <Button sx={{backgroundColor: "#141414", color:"white"}}>
                     <TelegramIcon/>
                 </Button>
-                <Button sx={{backgroundColor: "#141414"}}>
+                <Button sx={{backgroundColor: "#141414", color:"white"}}>
                     <InstagramIcon/>
                 </Button>
-                <Button sx={{backgroundColor: "#141414"}}>
+                <Button sx={{backgroundColor: "#141414", color:"white"}}>
                     <YouTubeIcon/>
                 </Button>
             </ButtonGroup>

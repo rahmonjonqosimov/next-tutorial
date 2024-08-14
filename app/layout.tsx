@@ -4,7 +4,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/helpers/theme';
 import { Footer, Navbar } from '@/components';
-import './globals.css';
 
 export default function RootLayout({
   children,

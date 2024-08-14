@@ -1,6 +1,6 @@
 'use client'
 import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { navItem } from '@/config/constants';
 import CloseIcon from '@mui/icons-material/Close';
@@ -32,11 +32,13 @@ const Navbar:React.FC = ( props: Props ) => {
         <Divider />
         <List>
           {navItem.map((item) => (
-            <ListItem key={item.id} disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item.label} />
-              </ListItemButton>
-            </ListItem>
+            <Fragment key={item.id}>
+              <ListItem disablePadding>
+                <ListItemButton sx={{ textAlign: 'center' }}>
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
+              </ListItem>
+            </Fragment>
           ))}
         </List>
       </Box>
@@ -68,9 +70,11 @@ const Navbar:React.FC = ( props: Props ) => {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItem.map((item) => (
-              <Button key={item.id} sx={{ color: '#fff' }}>
-                {item.label}
-              </Button>
+              <Fragment key={item.id}>
+                  <Button sx={{ color: '#fff' }}>
+                    {item.label}
+                  </Button>
+              </Fragment>
             ))}
           </Box>
         </Toolbar>
